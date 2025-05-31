@@ -1,0 +1,226 @@
+body {
+background: linear-gradient(to bottom, black, rgb(7, 1, 100));
+ height: 100%;
+  align-items: center;
+  margin: 0;
+    padding: 0;
+    flex-direction: column;
+    color: white;
+}
+
+.menu {
+    position: fixed; /* Mantém o menu fixo na tela */
+    top: 0; /* Fixa no topo da página */
+    width: 100%; /* Garante que ocupe toda a largura */
+    background: rgb(7, 1, 100); /* Cor de fundo */
+    text-align: center;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Efeito de sombra */
+    z-index: 1000; /* Mantém o menu sobre outros elementos */
+}
+
+/* Lista de navegação */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+/* Itens do menu */
+.menu ul li {
+    display: inline-block;
+}
+
+/* Links do menu */
+.menu ul li a {
+    display: block;
+    background: rgba(255, 255, 255, 0.2); /* Fundo leve */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse */
+.menu ul li a:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1); /* Aumenta ligeiramente */
+    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Ajuste para o restante da página não ficar escondido pelo menu */
+body {
+    padding-top: 70px; /* Compensa a altura do menu fixo */
+}
+
+
+.indies{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.descr{
+    font-size: 20px;
+    text-align: justify;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.bloco{
+    float: left;
+    display: grid; 
+    grid-template-columns: auto 1fr;
+    gap: 25px;
+}
+
+ 
+.destaque {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.lixo{
+    height: 500px;
+    border-radius: 10px;
+}
+
+.logo{
+    height: 220px;
+}
+
+#cabecalho{
+   
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+   
+}
+
+.nome{
+    font-weight: bold;
+    box-sizing: border-box;
+    width: 100%;
+    gap: 20px;
+    padding: 40px;
+    width: 100%;
+    text-align: left;
+}
+.circulo {
+    background: rgb(7, 1, 100); /* Cor do fundo */
+    color: #ffffff; /* Cor do texto */
+    padding: 10px 10px; /* Espaçamento interno */
+    border-radius: 50px; /* Deixa o fundo arredondado */
+    display: inline-block; /* Mantém o tamanho ajustado ao texto */
+    font-weight: bold; /* Deixa o texto mais destacado */
+}
+
+h1{
+  font-size: 40px;
+}
+ 
+td{
+text-align: middle;
+    padding:20px;
+}
+
+.sobre{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.footer {
+  background-color: rgb(7, 1, 100);
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-size: 20px;
+    height: 100%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+
+.img_icon{
+    height: 50px;
+}
+
+.text{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.icons {
+    width: 100%;
+    display: table;
+    margin: auto;
+    height: 100%;
+}
+
+.icons td {
+    text-align: center;
+}
+
+.mapa{
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+.flip-box {
+  background-color: transparent;
+  
+  width: 250px;
+  height: 165px;
+  border: none;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+    border-radius: 10px;
+    padding-top:0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: transparent;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background: linear-gradient(to bottom, rgb(18, 1, 255), rgb(10, 1, 133));
+  color: white;
+  transform: rotateY(180deg);
+}
